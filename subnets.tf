@@ -39,7 +39,7 @@ resource "aws_subnet" "private_1" {
 
 
   tags = {
-    Name                              = "public-eu-west-1a"
+    Name                              = "private-eu-west-1a"
     "kubernetes.io/cluster/eks"       = "shared"
     "kubernetes.io/role/internal-elb" = 1
     Terraform                         = "true"
@@ -55,7 +55,7 @@ resource "aws_subnet" "private_2" {
 
 
   tags = {
-    Name                              = "public-eu-west-1b"
+    Name                              = "private-eu-west-1b"
     "kubernetes.io/cluster/eks"       = "shared"
     "kubernetes.io/role/internal-elb" = 1
     Terraform                         = "true"
