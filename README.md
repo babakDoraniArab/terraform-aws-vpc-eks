@@ -1,6 +1,6 @@
 # How to configure VPC and EKS from scratch
     
-    with this package you can have VPC and EKS from scratch. just clone it and then put the following commands. please be sure about your aws cli profile.
+with this package you can have VPC and EKS from scratch. just clone it and then put the following commands. please be sure about your aws cli profile.
 `terraform init` 
 
 `terraform fmt`
