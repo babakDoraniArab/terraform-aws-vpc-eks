@@ -54,19 +54,4 @@ resource "aws_eks_cluster" "eks" {
   ]
 }
 
-output "aws_eks_cluster_endpoint" {
-  value = aws_eks_cluster.eks.endpoint
-}
-output "aws_eks_cluster_arn" {
-  value = aws_eks_cluster.eks.arn
-}
-output "aws_eks_cluster_id" {
-  value = aws_eks_cluster.eks.id
-}
-output "aws_eks_cluster_status" {
-  value = aws_eks_cluster.eks.status
-}
-output "aws_eks_created_at" {
-  value = aws_eks_cluster.eks.created_at
-}
 

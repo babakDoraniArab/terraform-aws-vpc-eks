@@ -15,36 +15,6 @@ resource "aws_nat_gateway" "gw1" {
 }
 
 
-output "aws_nat_gateway_gw1_id" {
-  value       = aws_nat_gateway.gw1.id
-  description = "internet gateway id"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw1_allocation_id" {
-  value       = aws_nat_gateway.gw1.allocation_id
-  description = "gateway_nat1_allocation_id"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw1_subnet_id" {
-  value       = aws_nat_gateway.gw1.subnet_id
-  description = "gateway_nat1_subnet_id"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw1_private_ip" {
-  value       = aws_nat_gateway.gw1.private_ip
-  description = "gateway_nat1_private_ip"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw1_public_ip" {
-  value       = aws_nat_gateway.gw1.public_ip
-  description = "gateway_nat1_public_ip"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw1_tags_all" {
-  value       = aws_nat_gateway.gw1.tags_all
-  description = "gateway_nat1_tags_all"
-  sensitive   = false
-}
 
 
 ################################
@@ -65,33 +35,3 @@ resource "aws_nat_gateway" "gw2" {
 }
 
 
-output "aws_nat_gateway_gw2_id" {
-  value       = aws_nat_gateway.gw2.id
-  description = "internet gateway id"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw2_allocation_id" {
-  value       = aws_nat_gateway.gw2.allocation_id
-  description = "gateway_gw2_allocation_id"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw2_subnet_id" {
-  value       = aws_nat_gateway.gw2.subnet_id
-  description = "gateway_gw2_subnet_id"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw2_private_ip" {
-  value       = aws_nat_gateway.gw2.private_ip
-  description = "gateway_gw2_private_ip"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw2_public_ip" {
-  value       = aws_nat_gateway.gw2.public_ip
-  description = "gateway_gw2_public_ip"
-  sensitive   = false
-}
-output "aws_nat_gateway_gw2_tags_all" {
-  value       = aws_nat_gateway.gw2.tags_all
-  description = "gateway_gw2_tags_all"
-  sensitive   = false
-}
