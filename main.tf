@@ -1,46 +1,4 @@
 ################################
-## GW1
-################################
-resource "aws_nat_gateway" "gw1" {
-  allocation_id = aws_eip.nat1.id
-  subnet_id     = aws_subnet.public_1.id
-
-  tags = {
-    Name = "gw1 NAT1"
-  }
-
-  # To ensure proper ordering, it is recommended to add an explicit dependency
-  # on the Internet Gateway for the VPC.
-  depends_on = [aws_internet_gateway.main]
-}
-
-################################
-## GW2
-################################
-
-resource "aws_nat_gateway" "gw2" {
-  allocation_id = aws_eip.nat2.id
-  subnet_id     = aws_subnet.public_2.id
-
-  tags = {
-    Name = "NAT2 gw2"
-  }
-
-  # To ensure proper ordering, it is recommended to add an explicit dependency
-  # on the Internet Gateway for the VPC.
-  depends_on = [aws_internet_gateway.main]
-}
-
-resource "aws_internet_gateway" "main" {
-  vpc_id = aws_vpc.main.id
-
-  tags = {
-    Name      = "main"
-    Terraform = "true"
-  }
-}
-
-################################
 # Eks cluster
 ################################
 
@@ -62,8 +20,6 @@ resource "aws_eks_cluster" "eks" {
 
   ]
 }
-
-
 
 ################################
 # Eks cluster iam role
@@ -160,8 +116,6 @@ resource "aws_iam_role" "node_general" {
 
 }
 
-
-
 resource "aws_iam_role_policy_attachment" "amazon_eks_worker_node_policy_general" {
   role       = aws_iam_role.node_general.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
@@ -178,4 +132,3 @@ resource "aws_iam_role_policy_attachment" "amazon_ec2_container_registry_read_on
   role       = aws_iam_role.node_general.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 }
-
