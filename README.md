@@ -1,3 +1,16 @@
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.1 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.71 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 3.71 |
+
 # How to configure VPC and EKS from scratch
     
 with this package you can have VPC and EKS from scratch. just clone it and then put the following commands. please be sure about your aws cli profile.
