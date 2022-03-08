@@ -1,5 +1,3 @@
-
-
 ################################
 ## VPC
 ################################
@@ -55,10 +53,10 @@ output "vpc_default_security_group_id" {
   sensitive   = false
 }
 
-
 ################################
 ## GW1
 ################################
+
 output "aws_nat_gateway_gw1_id" {
   value       = aws_nat_gateway.gw1.id
   description = "internet gateway id"
@@ -89,7 +87,6 @@ output "aws_nat_gateway_gw1_tags_all" {
   description = "gateway_nat1_tags_all"
   sensitive   = false
 }
-
 
 ################################
 ## GW2
@@ -126,9 +123,6 @@ output "aws_nat_gateway_gw2_tags_all" {
   sensitive   = false
 }
 
-
-
-
 ################################
 ## GW2
 ################################
@@ -154,12 +148,9 @@ output "internet_gateway_tags_all" {
   sensitive   = false
 }
 
-
 ################################
 ## EKS
 ################################
-
-
 
 output "aws_eks_cluster_endpoint" {
   value = aws_eks_cluster.eks.endpoint

@@ -1,8 +1,5 @@
 
-.terraform.lock.hcl
 terraform.tfstate
-.terraform/providers/registry.terraform.io/hashicorp/aws/3.73.0/darwin_arm64/terraform-provider-aws_v3.73.0_x5
-
 terraform.tfstate.backup
-
-.terraform.tfstate.lock.info
+.terraform
+.terrafor*
